@@ -748,7 +748,7 @@ export default {
         return store.state.unlock.villageBuildings6.use;
     }, price(lvl) {
         let obj = {village_stone: Math.pow(2.35, lvl) * buildNum(1.32, 'T'), village_water: Math.pow(4.1, lvl) * buildNum(90, 'T'), village_knowledge: lvl * 500 + 1500};
-        if (lvl == 0) {
+        if (lvl <= 0) {
             obj.village_knowledge = 1000;
         }
         return obj;
